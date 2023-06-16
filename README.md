@@ -32,4 +32,5 @@ Pour Firefox
   <li>/HAHA</li>
   <li>/COIN</li>
   <li>/CHUT</li>
+  <li>/EVENT</li>
 </ul>
