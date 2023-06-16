@@ -7,6 +7,8 @@ Une simple extension de navigateur pour activer des notifications sonores et vis
   <li>Affiche une notification de message sur l'onglet de la page</li>
   <li>Testée et compatible avec Firefox, Chrome, Edge et Brave</li>
   <li>Notifications désactivées si la fenêtre de la chatbox est affichée</li>
+  <li>Propose un mode "auto actualisation"</li>
+  <li>Ajoute un menu pour sélectionner la durée d'auto actualisation</li>
  </ul>
  
 # installation
