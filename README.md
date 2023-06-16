@@ -8,12 +8,6 @@ Une simple extension de navigateur pour activer des notifications sonores et vis
   <li>Testée et compatible avec Firefox, Chrome, Edge et Brave</li>
   <li>Notifications désactivées si la fenêtre de la chatbox est affichée</li>
  </ul>
-
-# version
-<ul>
-  <li>Classic version : les commandes sonores du chat ne sont entendues que par l'utilisateur.</li>
-  <li>Wizz version : les commandes sonores du chat sont entendues par tous les utilisateurs.</li>
- </ul>
  
 # installation
 Pour Chrome, Edge, Brave :
