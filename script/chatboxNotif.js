@@ -1,20 +1,15 @@
 const chatboxElt = document.getElementById("chatbox");
 const inputElt = document.getElementById("message");
-//Fichiers MP3
-const notificationSound = new Audio("https://assets.mixkit.co/active_storage/sfx/2358/2358-preview.mp3");
-const puissanceEE = new Audio("https://www.myinstants.com/media/sounds/puissance-et-gloire.mp3");
-const wizzEE = new Audio("https://www.myinstants.com/media/sounds/msn-wizz-sound.mp3");
-const hahaEE = new Audio("https://www.myinstants.com/media/sounds/the-simpsons-nelsons-haha.mp3");
-const coinEE = new Audio("https://www.myinstants.com/media/sounds/couin.mp3");
-const chutEE = new Audio("https://www.myinstants.com/media/sounds/ta-gueule_6iavH8Q.mp3");
+const notificationSound = new Audio("https://alexachab.github.io/cssTemplate/medias/notification.mp3");
+document.addEventListener("visibilitychange", handleVisibilityChange);
+
 //Fenêtres autorisées
 const windowsURL = [
     "https://ashes-arise.forumactif.com/chatbox/",
     "https://ashes-arise.forumactif.com/chatbox/index.php?archives"
 ];
 
-//Vérifie le statut de la fenêtre chatbox
-document.addEventListener("visibilitychange", () => {
+function handleVisibilityChange() {
     if (document.visibilityState === "hidden") {
         //Créé un objet observant la chatbox
         let observer = new MutationObserver(mutations => {
@@ -25,7 +20,7 @@ document.addEventListener("visibilitychange", () => {
                     && windowsURL.includes(window.location.href)) {
                     document.title = "NOUVEAUX MESSAGES";
                     notificationSound.play();
-                };
+                }
             });
         });
         //Paramètres à observer
@@ -36,21 +31,30 @@ document.addEventListener("visibilitychange", () => {
     } else {
         //Réinitialise la chatbox si active
         document.title = "ChatBox";
-        delete MutationObserver;
-    };
-});
+    }
+}
 
-//Easter Egg
+const easterEggSounds = {
+    "/PUISSANCE": new Audio("https://alexachab.github.io/cssTemplate/medias/puissance-et-gloire.mp3"),
+    "/WIZ": new Audio("https://alexachab.github.io/cssTemplate/medias/msn-wizz-sound.mp3"),
+    "/HAHA": new Audio("https://alexachab.github.io/cssTemplate/medias/the-simpsons-nelsons-haha.mp3"),
+    "/COIN": new Audio("https://alexachab.github.io/cssTemplate/medias/couin.mp3"),
+    "/CHUT": new Audio("https://alexachab.github.io/cssTemplate/medias/ta-gueule_6iavH8Q.mp3"),
+    "/EVENT": new Audio("https://alexachab.github.io/cssTemplate/medias/wilhelmscream.mp3")
+};
+
+function playSound(sound) {
+    try {
+        sound.play();
+    } catch (error) {
+        console.error("ChatboxNotif.Erreur lors de la lecture du son :", error);
+    }
+}
+
 inputElt.addEventListener("change", () => {
-    if (inputElt.value == "/PUISSANCE") {
-        puissanceEE.play();
-    } else if (inputElt.value == "/WIZ") {
-        wizzEE.play();
-    } else if (inputElt.value == "/HAHA") {
-        hahaEE.play();
-    } else if (inputElt.value == "/COIN") {
-        coinEE.play();
-    } else if (inputElt.value == "/CHUT") {
-        chutEE.play();
+    const inputValue = inputElt.value;
+    if (inputValue in easterEggSounds) {
+        playSound(easterEggSounds[inputValue]);
     }
 });
+
