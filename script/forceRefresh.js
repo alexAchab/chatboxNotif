@@ -73,8 +73,10 @@ if (checkboxState !== null) {
 }
 
 if (checkboxState !== null
-    && checkboxState !== "none") {
+    && checkboxState !== "none"
+    && windowsURL.includes(window.location.href)) {
     countdown(checkboxState);
+    notificationSound.play();
 }
 
 selectElt.addEventListener("change", () => {
