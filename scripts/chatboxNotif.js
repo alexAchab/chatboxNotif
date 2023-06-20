@@ -40,7 +40,11 @@ const easterEggSounds = {
     "/HAHA": new Audio("https://alexachab.github.io/cssTemplate/medias/the-simpsons-nelsons-haha.mp3"),
     "/COIN": new Audio("https://alexachab.github.io/cssTemplate/medias/couin.mp3"),
     "/CHUT": new Audio("https://alexachab.github.io/cssTemplate/medias/ta-gueule_6iavH8Q.mp3"),
-    "/EVENT": new Audio("https://alexachab.github.io/cssTemplate/medias/wilhelmscream.mp3")
+    "/EVENT": new Audio("https://alexachab.github.io/cssTemplate/medias/wilhelmscream.mp3"),
+    "/CALL Hornet": new Audio("https://alexachab.github.io/cssTemplate/medias/claimed.mp3"),
+    "/CALL Scox": new Audio("https://alexachab.github.io/cssTemplate/medias/soul.mp3"),
+    "/CALL Beleth": new Audio("https://alexachab.github.io/cssTemplate/medias/fetch-me.mp3"),
+    "/OPEN": new Audio("https://alexachab.github.io/cssTemplate/medias/you-opened-the-box.mp3")
 };
 
 function playSound(sound) {
