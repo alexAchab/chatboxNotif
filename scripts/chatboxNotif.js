@@ -44,7 +44,7 @@ const easterEggSounds = {
     "/CALL Hornet": new Audio("https://alexachab.github.io/cssTemplate/medias/claimed.mp3"),
     "/CALL Scox": new Audio("https://alexachab.github.io/cssTemplate/medias/soul.mp3"),
     "/CALL Beleth": new Audio("https://alexachab.github.io/cssTemplate/medias/fetch-me.mp3"),
-    "Open the box ?": new Audio("https://alexachab.github.io/cssTemplate/medias/you-opened-the-box.mp3")
+    "/OPEN": new Audio("https://alexachab.github.io/cssTemplate/medias/you-opened-the-box.mp3")
 };
 
 function playSound(sound) {
@@ -59,12 +59,6 @@ inputElt.addEventListener("change", () => {
     const inputValue = inputElt.value;
     if (inputValue in easterEggSounds) {
         playSound(easterEggSounds[inputValue]);
-    }
-    if (inputValue == "Open the box ?") {
-        const containerElt = document.getElementById("chatbox_members")
-        const imgElt = document.createElement("img")
-        imgElt.src = "https://i.goopics.net/0b6373.jpg"
-        containerElt.insertBefore(imgElt, containerElt.firstChild);
     }
 });
 
