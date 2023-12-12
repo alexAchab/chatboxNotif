@@ -35,4 +35,8 @@ Pour Firefox
   <li>/COIN</li>
   <li>/CHUT</li>
   <li>/EVENT</li>
+  <li>/CALL Hornet</li>
+  <li>/CALL Scox</li>
+  <li>/CALL Beleth</li>
+  <li>/OPEN</li>
 </ul>
