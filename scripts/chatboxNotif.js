@@ -44,7 +44,8 @@ const easterEggSounds = {
     "/CALL Hornet": new Audio("https://alexachab.github.io/cssTemplate/medias/claimed.mp3"),
     "/CALL Scox": new Audio("https://alexachab.github.io/cssTemplate/medias/soul.mp3"),
     "/CALL Beleth": new Audio("https://alexachab.github.io/cssTemplate/medias/fetch-me.mp3"),
-    "/OPEN": new Audio("https://alexachab.github.io/cssTemplate/medias/you-opened-the-box.mp3")
+    "/OPEN": new Audio("https://alexachab.github.io/cssTemplate/medias/you-opened-the-box.mp3"),
+    "/INVOC": new Audio("https://alexachab.github.io/cssTemplate/medias/invocation.mp3")
 };
 
 function playSound(sound) {
