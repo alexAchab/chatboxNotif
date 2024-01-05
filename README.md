@@ -39,4 +39,5 @@ Pour Firefox
   <li>/CALL Scox</li>
   <li>/CALL Beleth</li>
   <li>/OPEN</li>
+  <li>/INVOC</li>
 </ul>
